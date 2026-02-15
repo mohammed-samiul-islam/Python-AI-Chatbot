@@ -15,13 +15,13 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
 
 ## 🗂️ Project Structure
 
-📦 Python-AI-Chatbot
-├── agent.py # Defines the AI Agent and tools
-├── main.py # FastAPI web app
-├── requirements.txt # Python dependencies
-├── pyproject.toml # Project metadata
-├── templates/ # HTML UI templates
-└── README.md
+#### 📦 Python-AI-Chatbot
+    - agent.py # Defines the AI Agent and tools
+    - main.py # FastAPI web app
+    - requirements.txt # Python dependencies
+    - pyproject.toml # Project metadata
+    - templates/ # HTML UI templates
+    - README.md
 
 ---
 
@@ -31,30 +31,30 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
    ```bash
    git clone https://github.com/mohammed-samiul-islam/Python-AI-Chatbot.git
    cd Python-AI-Chatbot
-    ```bash
+
 
 2. **Install dependencies**
     ```bash
     pip install -r requirements.txt
-    ```bash
+    
     
 3. **Set up environment variables**
     ```bash
     OPENAI_API_KEY=your_openai_api_key_here
-    ``bash
+    
 ---
 
 ## 📦 Usage
-Run the API
+#### Run the API
 
     ```bash
     python main.py
-    ```bash
+    
 
 This starts the FastAPI server on http://localhost:8000.
 You’ll see a simple HTML interface where you can submit prompts to interact with the AI agent.
 
-How the agent “Thinks”
+#### How the agent “Thinks”
 
 The LangChain agent can do things like:
 
@@ -108,11 +108,11 @@ Your project needs:
 
 Feel free to:
 
-Improve the frontend UI
+    - Improve the frontend UI
 
-Add more tools for the agent
+    - Add more tools for the agent
 
-Integrate chat history or authentication
+    - Integrate chat history or authentication
 
 ---
 
