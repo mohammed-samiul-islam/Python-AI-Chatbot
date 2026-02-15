@@ -16,12 +16,12 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
 ## 🗂️ Project Structure
 
 #### 📦 Python-AI-Chatbot
-    - agent.py # Defines the AI Agent and tools
-    - main.py # FastAPI web app
-    - requirements.txt # Python dependencies
-    - pyproject.toml # Project metadata
-    - templates/ # HTML UI templates
-    - README.md
+- agent.py # Defines the AI Agent and tools
+- main.py # FastAPI web app
+- requirements.txt # Python dependencies
+- pyproject.toml # Project metadata
+- templates/ # HTML UI templates
+- README.md
 
 ---
 
@@ -45,8 +45,7 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
 ---
 
 ## 📦 Usage
-#### Run the API
-
+### Run the API
     ```bash
     python main.py
     
@@ -54,15 +53,13 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
 This starts the FastAPI server on http://localhost:8000.
 You’ll see a simple HTML interface where you can submit prompts to interact with the AI agent.
 
-#### How the agent “Thinks”
+### How the agent “Thinks”
 
 The LangChain agent can do things like:
 
-    - Read the contents of a text file
-
-    - Write content to a file
-
-    - Respond to natural language prompts
+- Read the contents of a text file
+- Write content to a file
+- Respond to natural language prompts
 
 Example tools are already defined in agent.py.
 
@@ -71,8 +68,8 @@ Example tools are already defined in agent.py.
 ## 🧪 Example Prompt
 
 Try sending it something like:
-
-Please write a new note with title “todo.txt” saying “Finish project README”.
+    ```bash
+    Please write a new note with title “todo.txt” saying “Finish project README”.
 
 The agent will use its note writing tool and return a helpful response.
 
@@ -108,11 +105,9 @@ Your project needs:
 
 Feel free to:
 
-    - Improve the frontend UI
-
-    - Add more tools for the agent
-
-    - Integrate chat history or authentication
+- Improve the frontend UI
+- Add more tools for the agent
+- Integrate chat history or authentication
 
 ---
 
