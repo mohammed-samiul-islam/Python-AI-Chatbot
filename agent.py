@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -38,7 +38,7 @@ SYSTEM_MESSAGE = (
 )
 
 llm = ChatOpenAI(model="gpt-4", temperature=0.6)
-agent = create_react_agent(llm, TOOLS, prompt=SYSTEM_MESSAGE)
+agent = create_agent(llm, TOOLS, prompt=SYSTEM_MESSAGE)
 
 
 def run_agent(user_input: str) -> str:
