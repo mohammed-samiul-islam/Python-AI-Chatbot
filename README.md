@@ -1,8 +1,6 @@
 # Python AI Chatbot
 
-A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain agent to process prompts and perform note-taking tasks like reading and writing text files based on natural language instructions. :contentReference[oaicite:1]{index=1}
-
----
+A simple AI-powered chatbot web app built with **FastAPI** that uses a **LangChain** agent to process prompts and perform note-taking tasks like reading and writing text files based on natural language instructions.
 
 ## 🚀 Features
 
@@ -11,19 +9,15 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
 - 🌐 Web interface with FastAPI & Jinja2 templates  
 - ⚡ Easy to run locally with minimal setup
 
----
-
 ## 🗂️ Project Structure
 
-#### 📦 Python-AI-Chatbot
+### 📦 Python-AI-Chatbot
 - agent.py # Defines the AI Agent and tools
 - main.py # FastAPI web app
 - requirements.txt # Python dependencies
 - pyproject.toml # Project metadata
 - templates/ # HTML UI templates
 - README.md
-
----
 
 ## 🛠️ Installation
 
@@ -42,11 +36,8 @@ A simple AI-powered chatbot web app built with **FastAPI** that uses a LangChain
     ```bash
     OPENAI_API_KEY=your_openai_api_key_here
     
----
-
 ## 📦 Usage
 ### Run the API
-    ```bash
     python main.py
     
 
@@ -63,17 +54,13 @@ The LangChain agent can do things like:
 
 Example tools are already defined in agent.py.
 
----
-
 ## 🧪 Example Prompt
 
 Try sending it something like:
-    ```bash
-    Please write a new note with title “todo.txt” saying “Finish project README”.
+
+- Please write a new note with title “todo.txt” saying “Finish project README”.
 
 The agent will use its note writing tool and return a helpful response.
-
----
 
 ## 🧠 Requirements
 
@@ -99,8 +86,6 @@ Your project needs:
 
         - Jinja2
 
----
-
 ## 💡 Contribution
 
 Feel free to:
@@ -109,16 +94,10 @@ Feel free to:
 - Add more tools for the agent
 - Integrate chat history or authentication
 
----
-
 ## 📄 License
 
 This project doesn’t currently include an open license — if you want to make it open source for others to use, consider adding a LICENSE file.
 
---- 
-
 ## 🙌 Acknowledgements
 
 Thanks for building and sharing this repository — a great base for learning about building AI-assisted web apps with FastAPI and LangChain! 🎉
-
----
