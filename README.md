@@ -1,120 +1,59 @@
 # Python AI Chatbot
 
-A simple AI-powered chatbot web app built with **FastAPI** that uses a **LangChain** agent to process prompts and perform note-taking tasks like reading and writing text files based on natural language instructions.
+A small FastAPI web app that sends prompts to a LangChain/LangGraph agent (OpenAI GPT-4) which can read and write text-file notes via natural language.
 
----
+## Features
 
-## 🚀 Features
+- Web UI (Jinja2 template at `templates/index.html`) for submitting prompts
+- `POST /agent` endpoint that invokes the agent and returns its response
+- Agent tools defined in `agent.py`:
+  - `read_note(filepath)` – read the contents of a text file
+  - `write_note(filepath, content)` – write content to a text file
+- Uses `ChatOpenAI(model="gpt-4", temperature=0.6)`
 
-- 🧠 Conversational AI powered by **LangChain + OpenAI**  
-- 📄 Tools for reading and writing notes via natural language  
-- 🌐 Web interface with FastAPI & Jinja2 templates  
-- ⚡ Easy to run locally with minimal setup
+## Tech Stack
 
----
+Python · FastAPI · Uvicorn · Jinja2 · LangChain · langchain-openai · LangGraph · python-dotenv
 
-## 🗂️ Project Structure
+## Project Structure
 
-### 📦 Python-AI-Chatbot
-- agent.py # Defines the AI Agent and tools
-- main.py # FastAPI web app
-- requirements.txt # Python dependencies
-- pyproject.toml # Project metadata
-- templates/ # HTML UI templates
-- README.md
+```
+agent.py           # LangChain agent + note tools
+main.py            # FastAPI app (GET /, POST /agent), runs Uvicorn on :8000
+templates/index.html
+requirements.txt
+pyproject.toml
+```
 
----
+## Getting Started
 
-## 🛠️ Installation
+```bash
+git clone https://github.com/mohammed-samiul-islam/Python-AI-Chatbot.git
+cd Python-AI-Chatbot
+pip install -r requirements.txt
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
+python main.py
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/mohammed-samiul-islam/Python-AI-Chatbot.git
-   cd Python-AI-Chatbot
+Open http://localhost:8000.
 
+### Environment Variables
 
-2. **Install dependencies**
-    ```bash
-    pip install -r requirements.txt
-    
-    
-3. **Set up environment variables**
-    ```bash
-    OPENAI_API_KEY=your_openai_api_key_here
-    
----
+| Name | Purpose |
+|------|---------|
+| `OPENAI_API_KEY` | OpenAI API key used by `langchain-openai` |
 
-## 📦 Usage
-### Run the API
-    python main.py
-    
-This starts the FastAPI server on http://localhost:8000.
-You’ll see a simple HTML interface where you can submit prompts to interact with the AI agent.
+## Example Prompt
 
-### How the agent “Thinks”
+> Please write a new note with title "todo.txt" saying "Finish project README".
 
-The LangChain agent can do things like:
+The agent calls its `write_note` tool and replies with the result.
 
-- Read the contents of a text file
-- Write content to a file
-- Respond to natural language prompts
+## Requirements
 
-Example tools are already defined in agent.py.
+- Python 3.8+
+- An OpenAI API key
 
----
+## License
 
-## 🧪 Example Prompt
-
-Try sending it something like:
-
-- Please write a new note with title “todo.txt” saying “Finish project README”.
-
-The agent will use its note writing tool and return a helpful response.
-
----
-
-## 🧠 Requirements
-
-Your project needs:
-
-    - Python 3.8+
-
-    - OpenAI API Key
-
-    - Libraries in requirements.txt, including:
-
-        - FastAPI
-
-        - Uvicorn
-
-        - LangChain
-
-        - LangChain-OpenAI
-
-        - LangGraph
-
-        - python-dotenv
-
-        - Jinja2
-
----
-
-## 💡 Contribution
-
-Feel free to:
-
-- Improve the frontend UI
-- Add more tools for the agent
-- Integrate chat history or authentication
-
----
-
-## 📄 License
-
-This project doesn’t currently include an open license — if you want to make it open source for others to use, consider adding a LICENSE file.
-
----
-
-## 🙌 Acknowledgements
-
-Thanks for building and sharing this repository — a great base for learning about building AI-assisted web apps with FastAPI and LangChain! 🎉
+No license file is currently included.
